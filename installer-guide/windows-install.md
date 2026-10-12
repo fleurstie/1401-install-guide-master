@@ -59,7 +59,7 @@ Keep note of that, because now we're going to build our USB. On the next page, s
 Take note here - in the installer, unless your Wi-Fi card is natively supported,(fancy Broadcom users, cough cough), or you use Ethernet, you will *not* have an internet connection, and will be unable to install macOS from internet recovery. You can either use an Ethernet cable, granted your NIC was picked up, [Android tethering with HoRNDis](https://github.com/TomHeaven/HoRNDIS), or, if you have an Intel Wi-Fi card, hardcode your SSID/Password for the Wi-Fi you want in itlwm's <code>Info.plist</code>. You will be able to install Heliport in post-install to get your Intel Wi-Fi into a fancy GUI, but for setting the Wi-Fi values manually:
 
 1. Open your USB from another machine, navigate to <code>EFI/OC/Kexts/itlwm.kext/Contents/Info.plist</code>.
-2.  Scroll down to WifiConfig, and under Wifi_1, enter your:
+2. Scroll down to WifiConfig, and under Wifi_1, enter your:
     * SSID (network name)
     * Password (self-explanitory)
 It's in plain-text, mind.
