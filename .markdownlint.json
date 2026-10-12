@@ -1,18 +1,18 @@
 {
 	"default": true,
-	"line_length": false,
-	"no-alt-text": false,
-	"no-inline-html": false,
-	"header-increment": false,
-	"no-duplicate-header": false,
-	"fenced-code-language": false,
-	"no-emphasis-as-heading": false,
-	"single-title": false,
-	"ul-style": {
+	"MD001": false,
+	"MD004": {
 		"style": "asterisk"
 	},
-	"link-fragments": false,
-	"MD055": {
-		"style": "leading_and_trailing"
-	}
+	"MD013": false,
+	"MD024": false,
+	"MD025": false,
+	"MD033": false,
+	"MD036": false,
+	"MD040": false,
+	"MD041": false,
+	"MD045": false,
+	"MD051": false,
+	"MD059": false,
+	"MD060": false
 }
