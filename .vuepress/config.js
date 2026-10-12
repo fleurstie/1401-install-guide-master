@@ -109,14 +109,12 @@ module.exports = {
                     path: '/troubleshooting/troubleshooting',
                     sidebarDepth: 0,
                     children: [
-                        '/troubleshooting/extended/opencore-issues',
                         '/troubleshooting/extended/kernel-issues',
                         '/troubleshooting/extended/userspace-issues',
                         '/troubleshooting/extended/post-issues',
                         '/troubleshooting/extended/misc-issues',
                     ]
                 },
-                '/troubleshooting/debug',
             ]
         },
         {
