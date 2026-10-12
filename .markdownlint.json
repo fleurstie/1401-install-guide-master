@@ -11,5 +11,8 @@
 	"ul-style": {
 		"style": "asterisk"
 	},
-	"link-fragments": false
+	"link-fragments": false,
+	"MD055": {
+		"style": "leading_and_trailing"
+	}
 }
