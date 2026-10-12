@@ -30,14 +30,18 @@ Then, granted you have an active internet connection (if in doubt, open Utilitie
 ![](../images/installer-guide/installing.png)
 
 Afterwards, it will reboot a couple of times, but do make sure to boot off the USB *every time*, and select either:
+
     * macOS Installer
     * Your drive name (whether Macintosh HD or otherwise)
+
 Don't panic if it reboots after selecting one. Try a couple more times, it might still be doing some things.
 
 After you've installed, hopefully it all goes fine, and you're in the.. very.. *fun* OOBE. Just get through it as quickly as possible, and more likely than not it'll stutter and resist efforts a lot. After you're through, you might be on the desktop! Congrats! It might not look very pretty due to the lack of *any drivers*, but this is where the fun begins.
 
 ## Driver installation
+
 Depending on how you set up the EFI, there's two potential ways to get the driver: 
+
     * In the /Nullmoth folder of your USB
     * Downloading from the GitHub
 
@@ -58,13 +62,15 @@ This image is taken from an already installed driver, but it's as simple as just
 
 ::: warning If it fails relating to the EFI
 You will need to mount your EFI manually, and maybe move the EFI folder to the drive manually (aswell as install the driver manually) if it refuses to install even after mounting the EFI. To do so:
+
     * Open terminal, type <code>diskutil list</code>
     * Find the EFI partition, which is probably the first, biggest drive, for example, <code>disk0s2</code>
     * Mount the EFI partition by doing <code>sudo diskutil mount disk0s2</code>, replacing <code>disk0s2</code> with your actual drive.
+
     Only follow the below if the app fails to install after mounting:
+
     * Copy the <code>EFI</code> folder from your mounted USB EFI to the internal EFI. This will allow you to reboot without the USB drive.
     * Continue on with the manual install below.
-
 :::
 Afterwards, go back to System Settings, then Privacy & Security, and it might say it was blocked. Make sure to allow it in the exact same spot you had to force open the app, then finally, reboot. 
 
@@ -87,6 +93,7 @@ On the other hand, if something goes terribly wrong and you're stuck and banging
 
 ::: danger Things That Do Not Work Right Now
 A couple things do not work, most notably:
+
     * WebGL
     * DRM content/encoding (like playing GIFs/videos on Discord, or trying to watch Netflix)
     * Certain Metal applications that try pick up a GPU
