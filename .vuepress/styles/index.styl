@@ -1,0 +1,369 @@
+$bg = var(--nm-bg)
+$panel = var(--nm-panel)
+$panel2 = var(--nm-panel2)
+$deep = var(--nm-deep)
+$line = var(--nm-line)
+$line2 = var(--nm-line2)
+$hi = var(--nm-hi)
+$text = var(--nm-text)
+$soft = var(--nm-soft)
+$muted = var(--nm-muted)
+$head = var(--nm-head)
+$purple = var(--nm-purple)
+$btn = var(--nm-btn)
+$btn2 = var(--nm-btn2)
+$link = var(--nm-link)
+$linkhover = var(--nm-linkhover)
+$cyan = var(--nm-cyan)
+$serif = "Times New Roman", Times, "Liberation Serif", "Nimbus Roman", serif
+$mono = "Courier New", Courier, "Liberation Mono", monospace
+$sans = Verdana, Geneva, Tahoma, "DejaVu Sans", sans-serif
+
+:root
+  --nm-bg #000
+  --nm-panel #0b0613
+  --nm-panel2 #150a24
+  --nm-deep #07030d
+  --nm-line #2a1447
+  --nm-line2 #5a3a8a
+  --nm-hi #8b5cc8
+  --nm-text #e6ddf3
+  --nm-soft #cfc3e4
+  --nm-muted #a898c2
+  --nm-head #fff
+  --nm-purple #b98aff
+  --nm-btn #5b27a3
+  --nm-btn2 #7c3fd0
+  --nm-link #c9a3ff
+  --nm-linkhover #fff
+  --nm-cyan #58e6ea
+
+[data-theme='light']
+  --nm-bg #f7f2fd
+  --nm-panel #ffffff
+  --nm-panel2 #ece3f8
+  --nm-deep #f1eafa
+  --nm-line #d6c5ee
+  --nm-line2 #9b78cf
+  --nm-hi #7c3fd0
+  --nm-text #1b0f2e
+  --nm-soft #3a2a56
+  --nm-muted #6b5a88
+  --nm-head #12041f
+  --nm-purple #b98aff
+  --nm-btn #5b27a3
+  --nm-btn2 #7c3fd0
+  --nm-link #5b27a3
+  --nm-linkhover #12041f
+  --nm-cyan #0a8f94
+
+[data-theme='light'], [data-theme='dark']
+  --bodyBgColor $bg
+  --sideBgColor $panel
+  --textColor $text
+  --accentColor $cyan
+  --borderColor $line
+  --codeBgColor $deep
+  --arrowBgColor $line2
+  --navItemHoverColor $linkhover
+  --dropShadowColor $line
+  --actionBtnHoverBorderColor $btn2
+
+[data-theme='dark']
+  color-scheme dark
+
+[data-theme='light']
+  color-scheme light
+
+html
+  overflow-y scroll
+  overflow-x hidden
+  background-color $bg
+
+body
+  position relative
+  z-index 0
+  background transparent
+  color $text
+  font 17px/1.6 $sans
+
+.theme-container, .theme-succinct-content, .page, .home
+  background transparent
+
+body::before, body::after, html::before
+  content ''
+  position fixed
+  inset -620px
+  z-index -1
+  pointer-events none
+  will-change transform, opacity
+
+body::before
+  background-image radial-gradient(1px 1px at 23px 41px, #cdb6ff 50%, transparent 51%), radial-gradient(1px 1px at 157px 12px, #fff 50%, transparent 51%), radial-gradient(1.5px 1.5px at 201px 187px, #d9c8ff 50%, transparent 51%)
+  background-size 240px 240px
+  animation drift1 130s linear infinite, twinkle 5s ease-in-out infinite
+
+body::after
+  background-image radial-gradient(1px 1px at 91px 133px, #8e6ad0 50%, transparent 51%), radial-gradient(1px 1px at 37px 97px, #fff 50%, transparent 51%), radial-gradient(1px 1px at 131px 21px, #b89cff 50%, transparent 51%)
+  background-size 180px 180px
+  animation drift2 185s linear infinite, twinkle 7.5s ease-in-out -3s infinite
+
+html::before
+  background-image radial-gradient(2px 2px at 61px 211px, #fff 50%, transparent 51%), radial-gradient(1.5px 1.5px at 251px 71px, #58e6ea 50%, transparent 51%), radial-gradient(1px 1px at 171px 143px, #cdb6ff 50%, transparent 51%)
+  background-size 300px 300px
+  animation drift3 250s linear infinite, twinkle 11s ease-in-out -6s infinite
+
+[data-theme='light'] body::before, [data-theme='light'] body::after
+  background-image radial-gradient(1px 1px at 23px 41px, #9b78cf 50%, transparent 51%), radial-gradient(1px 1px at 157px 12px, #b99be6 50%, transparent 51%), radial-gradient(1.5px 1.5px at 201px 187px, #7c3fd0 50%, transparent 51%)
+  opacity .5
+
+[data-theme='light'] html::before
+  display none
+
+@keyframes drift1
+  to
+    transform translate3d(-480px, 240px, 0)
+
+@keyframes drift2
+  to
+    transform translate3d(-360px, 180px, 0)
+
+@keyframes drift3
+  to
+    transform translate3d(-600px, 300px, 0)
+
+@keyframes twinkle
+  0%, 100%
+    opacity 1
+  50%
+    opacity .35
+
+@media (prefers-reduced-motion: reduce)
+  body::before, body::after, html::before
+    animation none
+
+::-webkit-scrollbar
+  width 0px
+  background transparent
+
+h1, h2, h3, h4, h5, h6
+  font-family $serif
+  color $head
+  letter-spacing -.01em
+
+h1
+  font-weight bold
+  font-size 2.8rem
+  line-height 1.05
+
+h2
+  font-weight bold
+  border-bottom 1px solid $line
+
+h3
+  font-weight bold
+
+a
+  color $link
+  &:hover
+    color $linkhover
+
+p, li
+  color $text
+
+.home .hero img
+  max-width 450px!important
+  border 2px ridge $hi
+
+.home .hero h1
+  font-size 4rem
+
+.home .hero .description
+  color $soft
+
+.action-button, .home .hero .action-button
+  display inline-flex!important
+  align-items center
+  justify-content center
+  min-height 48px
+  padding 0 24px!important
+  font bold 15px $sans!important
+  color #fff!important
+  text-decoration none
+  background-color $btn!important
+  border 2px outset $purple!important
+  border-radius 0!important
+  cursor pointer
+  &:hover
+    background-color $btn2!important
+    color #fff!important
+  &:active
+    border-style inset!important
+
+.home .features .feature
+  background $panel
+  border 1px solid $line
+  padding 20px
+  h2
+    border-bottom 0
+    color $cyan
+
+.navbar
+  background $bg
+  border-bottom 1px solid $line
+  filter drop-shadow(0px 1px 1px var(--dropShadowColor))
+  .site-name
+    font-family $serif!important
+    font-weight bold!important
+    letter-spacing .16em!important
+    color $head!important
+  a
+    color $soft
+    &:hover, &.router-link-active
+      color $linkhover
+  a.router-link-active
+    border-bottom 2px solid $cyan
+
+.navbar .links button, .navbar .nav-links button
+  min-height 44px
+  padding 0 14px
+  font 14px $sans
+  color $soft
+  background $panel
+  border 1px solid $line2
+  border-radius 0
+  cursor pointer
+  &:hover
+    color $linkhover
+    border-color $cyan
+
+.sidebar
+  background-color var(--sideBgColor)
+  border-right 1px solid $line
+  a
+    color $soft
+    &:hover
+      color $linkhover
+  a.active, .sidebar-link.active
+    color $cyan
+    border-left-color $cyan
+
+div[class*="language-"]
+  background $deep
+  border 1px solid $line
+  border-radius 0
+  pre, pre[class*="language-"]
+    margin-top 0
+    background transparent
+    font-family $mono
+
+code, pre
+  font-family $mono
+
+:not(pre) > code
+  background $panel2
+  color $cyan
+  border 1px solid $line
+  border-radius 0
+
+blockquote
+  background $panel
+  border-left 4px solid $hi
+  color $soft
+
+hr
+  border-color $line
+
+img
+  max-width 100%
+
+table
+  border-collapse collapse
+  border 1px solid $line
+
+tr
+  &:nth-child(1n)
+    background-color $panel
+  &:nth-child(2n)
+    background-color $panel2
+
+th, td
+  border 1px solid $line
+  color $text
+
+th
+  font-family $serif
+  color $head
+
+.custom-block
+  border-radius 0
+  background $panel
+  border-color $hi
+
+.custom-block.tip
+  border-color $cyan
+
+.dropdown-wrapper .nav-dropdown
+  border 1px solid $line2!important
+  background-color $panel2!important
+  box-shadow 0px 0px 2px $bg
+  right -12%!important
+
+@media (min-width: 1000px)
+  .theme-succinct-content:not(.custom)
+    max-width 70%
+
+@media (max-width: 760px)
+  h1
+    font-size 2.2rem
+  .home .hero h1
+    font-size 2.6rem
+
+.search-box input
+  background $deep
+  border 1px solid $line2
+  color $text
+  border-radius 0
+  &:focus
+    border-color $cyan
+    outline 2px solid $cyan
+    outline-offset 2px
+
+.search-box .suggestion a .suggestion-row .page-title
+  border-color var(--borderColor) !important
+  background-color var(--sideBgColor) !important
+
+.search-box .suggestion a .suggestion-row .suggestion-content
+  border-color var(--borderColor) !important
+
+.search-box .suggestion a .parent-page-title
+  background-color var(--bodyBgColor) !important
+  color var(--accentColor) !important
+
+.search-box .suggestion.focused a
+  color var(--navItemHoverColor) !important
+
+a:focus-visible, button:focus-visible, summary:focus-visible
+  outline 2px solid $cyan
+  outline-offset 2px
+
+.page-nav .inner
+  border-top 1px solid $line
+
+.page-edit .edit-link a
+  display inline-flex
+  align-items center
+  min-height 44px
+  padding 0 18px
+  font 15px $sans
+  color $text
+  background transparent
+  border 1px solid $line2
+  &:hover
+    color $linkhover
+    border-color $cyan
+
+.footer
+  border-top 1px solid $line
+  background $bg
+  color $muted
