@@ -40,7 +40,7 @@ This is quite important to follow and read. This will tell you what BIOS setting
 Take note of these, and when you reboot in a bit, press the setup key for your PC (usually Del, F2, F10 or F1, you can find this with a quick Google search online searching the board)
 
 | Setting | Option | Notes | 
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- |
 | Secure Boot | <span color="red">Off</span> | OpenCore is not signed, so it won't boot with it on. |
 | CSM | <span color="red">Off</span> | Issues can arise with CSM even just being on, even if you boot UEFI. Skip this if it doesn't exist. |
 | Fast Boot | <span color="orange">(Optionally) Off</span> | Not needed, but can cause issues with USB detection in userspace, so.. maybe. |
@@ -60,8 +60,9 @@ Take note here - in the installer, unless your Wi-Fi card is natively supported,
 
 1. Open your USB from another machine, navigate to <code>EFI/OC/Kexts/itlwm.kext/Contents/Info.plist</code>.
 2. Scroll down to WifiConfig, and under Wifi_1, enter your:
-    * SSID (network name)
-    * Password (self-explanitory)
+   * SSID (network name)
+   * Password (self-explanitory)
+
 It's in plain-text, mind.
 :::
 
