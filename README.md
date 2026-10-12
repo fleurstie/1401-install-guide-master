@@ -19,7 +19,7 @@ This guide specifically focuses on:
 - Guiding you through installing the driver, and using macOS with said driver
 - Troubleshooting and problems
 
-Because this driver is so new, temperamental, and awesome, you will be required to read this guide. Please. Do not just go straight to AI. If you have an issue before macOS even *boots*, there's a chance it's probably not our problem, so please, again, OpenCore guide. Light mode is also broken on this guide Lmao im not fixing it
+Because this driver is so new, temperamental, and awesome, you will be required to read this guide. Please. Do not just go straight to AI. If you have an issue before macOS even *boots*, there's a chance it's probably not our problem, so please, again, OpenCore guide. Light mode is also broken on this guide Lmao im not fixing it sorz
 
 Lastly, those having issues can join the [Discord](https://discord.gg/VmDyD83WdC), or post under any [Reddit post](https://www.reddit.com/user/null-moth/), as you are expected to receive the most help there.
 
