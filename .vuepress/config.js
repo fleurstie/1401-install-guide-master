@@ -17,12 +17,12 @@ module.exports = {
             name: 'apple-mobile-web-app-status-bar-style',
             content: 'black'
         }],
-        ["link", {
-            rel: "'stylesheet",
-            href: "/styles/website.css"
-        },]
+        ['link', {
+            rel: 'stylesheet',
+            href: '/1401-install-guide-master/styles/website.css'
+        }]
     ],
-    base: '/1401-Driver-Guide/',
+    base: '/1401-install-guide-master/',
 
     watch: {
         $page(newPage, oldPage) {
@@ -55,7 +55,7 @@ module.exports = {
 
     themeConfig: {
         lastUpdated: true,
-        repo: 'https://github.com/fleurstie/1401-install-guide',
+        repo: 'https://github.com/fleurstie/1401-install-guide-master',
         editLinks: true,
         editLinkText: 'Help us improve this page!',
         logo: '/homepage.png',
@@ -97,27 +97,27 @@ module.exports = {
             },
             ]
         },
-{
-    title: 'Troubleshooting',
-    collapsable: false,
-    sidebarDepth: 0,
-    children: [
         {
-            title: 'General Troubleshooting',
+            title: 'Troubleshooting',
             collapsable: false,
-            path: '/troubleshooting/troubleshooting',
             sidebarDepth: 0,
             children: [
-                '/troubleshooting/extended/opencore-issues',
-                '/troubleshooting/extended/kernel-issues',
-                '/troubleshooting/extended/userspace-issues',
-                '/troubleshooting/extended/post-issues',
-                '/troubleshooting/extended/misc-issues',
+                {
+                    title: 'General Troubleshooting',
+                    collapsable: false,
+                    path: '/troubleshooting/troubleshooting',
+                    sidebarDepth: 0,
+                    children: [
+                        '/troubleshooting/extended/opencore-issues',
+                        '/troubleshooting/extended/kernel-issues',
+                        '/troubleshooting/extended/userspace-issues',
+                        '/troubleshooting/extended/post-issues',
+                        '/troubleshooting/extended/misc-issues',
+                    ]
+                },
+                '/troubleshooting/debug',
             ]
         },
-        '/troubleshooting/debug',
-    ]
-},
         {
             title: 'OS Specific',
             collapsable: false,
@@ -137,7 +137,6 @@ module.exports = {
     },
     plugins: [
         '@vuepress/back-to-top',
-        'vuepress-plugin-smooth-scroll',
         'vuepress-plugin-fulltext-search',
         ['@vuepress/medium-zoom',
             {
