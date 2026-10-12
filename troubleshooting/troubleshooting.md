@@ -1,6 +1,6 @@
 # General Troubleshooting
 
-This is TBD and heavily WIP. I need to compile a list of issues to actually work with.
+This is TBD and heavily WIP. I need to compile a list of issues to actually work with. [Please head on over to the Discord to get support.](https://discord.gg/VmDyD83WdC)
 
 ## Table of Contents
 
