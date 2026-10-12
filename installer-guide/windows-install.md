@@ -48,6 +48,7 @@ Take note of these, and when you reboot in a bit, press the setup key for your P
 | Re-size(able) BAR | <span color="green">On </span> | Required by the NVIDIA driver, apparently it stays on the startup text w/o this on. |
 | XHCI/EHCI Hand-off | <span color="orange">(Optionally) On </span> | Skip if you do not have this |
 | IOMMU | <span color="orange">(Optionally) Off </span> | You can keep this on, but if you have an AMD board and macOS is hanging, try turning this off. |
+
 :::
 
 Keep note of that, because now we're going to build our USB. On the next page, select the USB. Then click "Erase and create" (which, if it weren't obvious, this will <span color="red">erase your entire USB drive</span>. Don't do it on a portable SSD with all your data on. **Check 100% to see that the device selected is the one you want to erase.**)
