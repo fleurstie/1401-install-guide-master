@@ -1,6 +1,6 @@
 # Supporting the guides
 
-**Note**: This is a community run guide which is not officially endorsed by Acidanthera. Please do not bug Acidanthera with issues about this guide.
+**Note**: This is a community run guide which is not officially endorsed by OpenCore. Please do not bug OpenCore devs with issues about this guide.
 
 Want to help support the guide? Well there's some ways you can help!
 

@@ -93,6 +93,7 @@ module.exports = {
                 children: [
                     '/installer-guide/windows-install',
                     '/installer-guide/mac-install',
+                    '/installer-guide/installing',
                 ],
             },
             ]

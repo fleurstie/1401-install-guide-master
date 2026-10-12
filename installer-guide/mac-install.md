@@ -5,8 +5,7 @@ Some people like to bring their own EFI, or like the learning experience of actu
 
 To start we'll want to grab ourselves a copy of the driver, which is either in the 1401 Mac app, or installed manually. Both will be covered.
 
-## Installing through the 1401 app
+## Installing
+Refer to [Driver Installation](installing.md#Driver-Installation)
 
-
-## Manual <code>install.sh</code>
 

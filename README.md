@@ -23,4 +23,4 @@ Because this driver is so new, temperamental, and awesome, you will be required 
 
 Lastly, those having issues can join the [Discord](https://discord.gg/VmDyD83WdC), or post under any [Reddit post](https://www.reddit.com/user/null-moth/), as you are expected to receive the most help there.
 
-<sup>Thank you to Dortania for making the OpenCore guide this was forked off! <3 </sup>
+<sup>Thank you to Dortania for making the [OpenCore guide this was forked off!](https://dortania.github.io/OpenCore-Install-Guide/) <3 </sup>
