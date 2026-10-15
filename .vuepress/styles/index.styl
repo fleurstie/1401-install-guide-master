@@ -367,3 +367,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible
   border-top 1px solid $line
   background $bg
   color $muted
+
+.nav-item:has(a[aria-label*="Switch to"]),
+li:has(a[aria-label*="Switch to"]) {
+  display: none !important;
+}
