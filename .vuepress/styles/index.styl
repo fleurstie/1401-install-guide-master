@@ -80,6 +80,10 @@ html
   overflow-x hidden
   background-color $bg
 
+html:has(body[data-theme='light'])
+  background-color #f7f2fd
+  color-scheme light
+
 body
   position relative
   z-index 0
@@ -259,6 +263,23 @@ div[class*="language-"]
 
 code, pre
   font-family $mono
+
+div[class*="language-"] pre code, div[class*="language-"] code
+  color $text
+
+[data-theme='light'] div[class*="language-"] .token
+  &.comment, &.prolog, &.doctype, &.cdata
+    color #6b5a88
+  &.punctuation, &.operator
+    color #3a2a56
+  &.property, &.tag, &.constant, &.symbol, &.deleted, &.boolean, &.number
+    color #a1245f
+  &.selector, &.attr-name, &.string, &.char, &.builtin, &.inserted
+    color #0a6e72
+  &.keyword, &.atrule, &.attr-value, &.function, &.class-name
+    color #5b27a3
+  &.variable, &.regex, &.important
+    color #9a4a00
 
 :not(pre) > code
   background $panel2
